@@ -1,38 +1,88 @@
-.App {
+/* Сброс стилей и базовые стили */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Стили для основного контейнера приложения */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Стили для верхнего блока с табами */
+.tabs {
+  display: flex;
+  background-color: #f3f3f3;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab {
+  margin-right: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.tab.active {
+  border-bottom: 2px solid blue;
+}
+
+/* Стили для основного содержимого */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+}
+
+/* Стили для блоков базы знаний */
+.knowledge-blocks {
+  flex-grow: 2;
+  border-right: 1px solid #ccc;
+}
+
+.knowledge-block {
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+
+.knowledge-block.active {
+  border-bottom: 2px solid blue;
+}
+
+/* Стили для списка правил и действий */
+.rules-actions-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.rules-list,
+.actions-list {
+  width: 50%;
+  padding: 20px;
+}
+
+.rule-item,
+.action-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Стили для нижнего блока с информацией с сервера */
+.server-info-container {
+  background-color: #f3f3f3;
+  padding: 50px;
+  border-top: 1px solid #ccc;
+}
+.server-info {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
